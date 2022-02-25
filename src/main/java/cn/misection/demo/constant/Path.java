@@ -10,10 +10,4 @@ package cn.misection.demo.constant;
 public @interface Path {
 
   String ROOT_PATH = "src/main/resources/";
-
-  String RELATION_PATH = "src/main/resources/data/suchaosheng/relation.xlsx";
-
-  String MONEY_DIR_PATH = "src/main/resources/data/suchaosheng/money/data/";
-
-  String OUT_DIR_PATH = "src/main/resources/out/suchaosheng/";
 }

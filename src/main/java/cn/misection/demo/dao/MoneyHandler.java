@@ -1,4 +1,4 @@
-package cn.misection.demo.io.dao;
+package cn.misection.demo.dao;
 
 /**
  * @author Military Intelligence 6 root

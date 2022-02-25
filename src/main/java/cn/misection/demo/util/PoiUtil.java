@@ -7,10 +7,6 @@ import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
-import org.apache.poi.xssf.usermodel.XSSFCell;
-import org.apache.poi.xssf.usermodel.XSSFRow;
-import org.apache.poi.xssf.usermodel.XSSFSheet;
-import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
 /**
  * @author Military Intelligence 6 root
@@ -30,7 +26,7 @@ public class PoiUtil {
     if (cell == null) {
       return;
     }
-    if (value == null || value.equals("null")) {
+    if (value == null || "null".equals(value)) {
       return;
     }
     cell.setCellValue(value);
