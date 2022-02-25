@@ -1,4 +1,4 @@
-package cn.misection.demo.entity;
+package cn.misection.relation.entity;
 
 import java.util.HashMap;
 import java.util.Map;

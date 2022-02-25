@@ -1,4 +1,4 @@
-package cn.misection.demo.dao;
+package cn.misection.relation.dao;
 
 import java.util.List;
 
@@ -7,8 +7,8 @@ import com.sun.istack.internal.NotNull;
 
 import cn.hutool.json.JSONUtil;
 import cn.hutool.log.Log;
-import cn.misection.demo.callback.RelationListener;
-import cn.misection.demo.entity.PersonRelationPair;
+import cn.misection.relation.callback.RelationListener;
+import cn.misection.relation.entity.PersonRelationPair;
 
 /**
  * @author Military Intelligence 6 root

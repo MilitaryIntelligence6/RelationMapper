@@ -1,4 +1,4 @@
-package cn.misection.demo.entity;
+package cn.misection.relation.entity;
 
 /**
  * @author Military Intelligence 6 root

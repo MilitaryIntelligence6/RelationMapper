@@ -1,4 +1,4 @@
-package cn.misection.demo.constant;
+package cn.misection.relation.constant;
 
 /**
  * @author Military Intelligence 6 root

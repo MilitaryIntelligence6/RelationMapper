@@ -1,4 +1,4 @@
-package cn.misection.demo.constant;
+package cn.misection.relation.constant;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Target;

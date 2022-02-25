@@ -1,13 +1,13 @@
-package cn.misection.demo.service.impl;
+package cn.misection.relation.service.impl;
 
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
 import cn.hutool.core.util.StrUtil;
-import cn.misection.demo.entity.PersonRelationPair;
-import cn.misection.demo.dao.RelationDAO;
-import cn.misection.demo.service.RelationService;
+import cn.misection.relation.entity.PersonRelationPair;
+import cn.misection.relation.dao.RelationDAO;
+import cn.misection.relation.service.RelationService;
 
 /**
  * @author Military Intelligence 6 root

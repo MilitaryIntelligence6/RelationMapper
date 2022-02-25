@@ -1,10 +1,10 @@
-package cn.misection.demo.app;
+package cn.misection.relation.app;
 
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
-import cn.misection.demo.constant.Path;
-import cn.misection.demo.task.MapperTask;
+import cn.misection.relation.constant.Path;
+import cn.misection.relation.task.MapperTask;
 
 /**
  * @author Military Intelligence 6 root

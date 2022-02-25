@@ -1,9 +1,9 @@
-package cn.misection.demo.service;
+package cn.misection.relation.service;
 
 import java.util.List;
 import java.util.Map;
 
-import cn.misection.demo.entity.PersonRelationPair;
+import cn.misection.relation.entity.PersonRelationPair;
 
 /**
  * @author Military Intelligence 6 root
