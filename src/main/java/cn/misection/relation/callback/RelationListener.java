@@ -28,7 +28,7 @@ public class RelationListener implements ReadListener<PersonRelationPair> {
   /**
    * 缓存的数据
    */
-  private List<PersonRelationPair> memoryDataList = new ArrayList<>(BATCH_COUNT);
+  private List<PersonRelationPair> memoryDataList;
 
   private final Consumer<List<PersonRelationPair>> consumer;
 
@@ -39,13 +39,13 @@ public class RelationListener implements ReadListener<PersonRelationPair> {
 
 
   @Override
-  public void invoke(PersonRelationPair personRelationPair, AnalysisContext analysisContext) {
-    Log.get().info("解析到一条数据{}", JSONUtil.toJsonStr(personRelationPair));
-    memoryDataList.add(personRelationPair);
+  public void invoke(PersonRelationPair pair, AnalysisContext context) {
+    Log.get().info("解析到一条数据{}", JSONUtil.toJsonStr(pair));
+    memoryDataList.add(pair);
   }
 
   @Override
-  public void doAfterAllAnalysed(AnalysisContext analysisContext) {
+  public void doAfterAllAnalysed(AnalysisContext context) {
     Log.get().info("所有 relation 数据解析完成!");
     consumer.accept(memoryDataList);
   }

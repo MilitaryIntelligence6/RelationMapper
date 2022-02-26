@@ -15,16 +15,18 @@ import com.alibaba.excel.EasyExcel
  */
 object RelationDAO {
 
-    fun readExcel(path: String): List<PersonRelationPair> {
-        var result: List<PersonRelationPair> = ArrayList()
-        EasyExcel.read(path, PersonRelationPair::class.java, RelationListener { dataList: List<PersonRelationPair> ->
-            run {
-                for ((index: Int, data: PersonRelationPair) in dataList.withIndex()) {
-                    Log.get().info("读取到第 {} 条数据 {}", index, JSONUtil.toJsonStr(data))
-                }
-            }
-            result = dataList
-        })
-        return result
-    }
+  @JvmStatic
+  fun readExcel(path: String): List<PersonRelationPair> {
+    var result: List<PersonRelationPair> = ArrayList()
+    EasyExcel.read(path, PersonRelationPair::class.java, RelationListener {
+      dataList: List<PersonRelationPair> ->
+      run {
+        for ((index: Int, data: PersonRelationPair) in dataList.withIndex()) {
+          Log.get().info("读取到第 {} 条数据 {}", index, JSONUtil.toJsonStr(data))
+        }
+        result = dataList
+      }
+    })
+    return result
+  }
 }
