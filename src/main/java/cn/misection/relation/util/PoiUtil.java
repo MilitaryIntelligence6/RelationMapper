@@ -8,6 +8,8 @@ import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
 
+import cn.hutool.core.util.StrUtil;
+
 /**
  * @author Military Intelligence 6 root
  * @version 1.0.0
@@ -17,22 +19,15 @@ import org.apache.poi.ss.usermodel.Workbook;
  */
 public class PoiUtil {
 
-  public static void safeColumnAppend(Workbook workbook, Sheet sheet, int rowNum, String value) {
+  public static void safeRowAppend(Sheet sheet, int rowNum, String value) {
     Row row = sheet.getRow(rowNum);
-    if (row == null) {
-      return;
+    Cell cell = row == null ? null : row.createCell(row.getLastCellNum() + 1);
+    if (cell != null && value != null) {
+      cell.setCellValue(value);
     }
-    Cell cell = row.createCell(row.getLastCellNum() + 1);
-    if (cell == null) {
-      return;
-    }
-    if (value == null || "null".equals(value)) {
-      return;
-    }
-    cell.setCellValue(value);
   }
 
-  public static void columnAppend(Workbook workbook, Sheet sheet, int rowNum, String value) {
+  public static void rowAppend(Workbook workbook, Sheet sheet, int rowNum, String value) {
     Row row = sheet.getRow(rowNum);
     Cell cell = row.createCell(row.getLastCellNum() + 1);
     cell.setCellValue(value);

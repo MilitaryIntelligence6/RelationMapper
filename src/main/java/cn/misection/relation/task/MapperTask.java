@@ -58,8 +58,8 @@ public class MapperTask implements Runnable {
         Row row = sheet.getRow(i);
         Cell judgeCell = row == null ? null : row.getCell(KEY_INDEX);
         String key = StrUtil.trim(judgeCell == null ? "null" : judgeCell.getStringCellValue());
-        String relation = String.valueOf(relationMap.get(key));
-        PoiUtil.safeColumnAppend(workbook, sheet, i, relation);
+        String relation = relationMap.get(key);
+        PoiUtil.safeRowAppend(sheet, i, relation);
       }
     }
     moneyService.save();
