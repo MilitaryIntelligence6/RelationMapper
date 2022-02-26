@@ -1,4 +1,4 @@
-package cn.misection.ktrelation.util;
+package cn.misection.relation.util;
 
 import java.io.FileOutputStream;
 import java.io.IOException;

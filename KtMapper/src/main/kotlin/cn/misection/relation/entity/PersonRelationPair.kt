@@ -1,4 +1,4 @@
-package cn.misection.ktrelation.entity
+package cn.misection.relation.entity
 
 import com.alibaba.excel.annotation.ExcelProperty
 

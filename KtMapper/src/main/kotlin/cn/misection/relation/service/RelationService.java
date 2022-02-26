@@ -1,4 +1,4 @@
-package cn.misection.ktrelation.service;
+package cn.misection.relation.service;
 
 import java.util.List;
 import java.util.Map;

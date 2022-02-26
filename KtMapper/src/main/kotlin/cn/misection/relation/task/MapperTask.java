@@ -1,4 +1,4 @@
-package cn.misection.ktrelation.task;
+package cn.misection.relation.task;
 
 import java.util.Map;
 

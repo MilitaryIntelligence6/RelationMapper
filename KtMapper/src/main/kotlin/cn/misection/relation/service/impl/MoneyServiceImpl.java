@@ -1,4 +1,4 @@
-package cn.misection.ktrelation.service.impl;
+package cn.misection.relation.service.impl;
 
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 

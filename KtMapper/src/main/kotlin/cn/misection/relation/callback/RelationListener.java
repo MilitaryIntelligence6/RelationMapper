@@ -1,4 +1,4 @@
-package cn.misection.ktrelation.callback;
+package cn.misection.relation.callback;
 
 import java.util.ArrayList;
 import java.util.List;
