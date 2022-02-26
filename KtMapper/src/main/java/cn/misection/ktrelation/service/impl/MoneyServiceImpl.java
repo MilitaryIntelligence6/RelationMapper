@@ -1,6 +1,5 @@
-package cn.misection.relation.service.impl;
+package cn.misection.ktrelation.service.impl;
 
-import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
 import cn.misection.relation.dao.MoneyDAO;
@@ -20,7 +19,7 @@ public class MoneyServiceImpl implements MoneyService {
 
   private final String outPath;
 
-  private Workbook moneyWorkbook;
+  private XSSFWorkbook moneyWorkbook;
 
   public MoneyServiceImpl(String moneyPath, String outPath) {
     this.moneyPath = moneyPath;
@@ -38,7 +37,7 @@ public class MoneyServiceImpl implements MoneyService {
   }
 
   @Override
-  public Workbook getMoneyWorkbook() {
+  public XSSFWorkbook getMoneyWorkbook() {
     return moneyWorkbook;
   }
 }

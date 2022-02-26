@@ -1,6 +1,6 @@
-package cn.misection.relation.service;
+package cn.misection.ktrelation.service;
 
-import org.apache.poi.ss.usermodel.Workbook;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
 /**
  * @author Military Intelligence 6 root
@@ -11,7 +11,7 @@ import org.apache.poi.ss.usermodel.Workbook;
  */
 public interface MoneyService {
 
-  Workbook getMoneyWorkbook();
+  XSSFWorkbook  getMoneyWorkbook();
 
   void save();
 }

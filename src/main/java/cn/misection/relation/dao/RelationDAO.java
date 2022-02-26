@@ -20,7 +20,7 @@ import cn.misection.relation.entity.PersonRelationPair;
 public class RelationDAO {
 
   @NotNull
-  public static List<PersonRelationPair> readXlsx(String path) {
+  public static List<PersonRelationPair> readExcel(String path) {
     final List<PersonRelationPair>[] result = new List[1];
     EasyExcel.read(path, PersonRelationPair.class, new RelationListener(
         (List<PersonRelationPair> dataList) -> {

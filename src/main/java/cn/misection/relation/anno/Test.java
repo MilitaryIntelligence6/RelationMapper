@@ -1,4 +1,4 @@
-package cn.misection.relation.constant;
+package cn.misection.relation.anno;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Target;

@@ -1,4 +1,4 @@
-package cn.misection.relation.service.impl;
+package cn.misection.ktrelation.service.impl;
 
 import java.util.HashMap;
 import java.util.List;
@@ -30,7 +30,7 @@ public class RelationServiceImpl implements RelationService {
   }
 
   private void init() {
-    relationList = RelationDAO.readExcel(path);
+    relationList = RelationDAO.readXlsx(path);
     relationMap = new HashMap<>(relationList.size());
     for (PersonRelationPair pair : relationList) {
       relationMap.put(StrUtil.trim(pair.getPerson()), StrUtil.trim(pair.getRelation()));
