@@ -14,13 +14,14 @@ import java.io.FileOutputStream
  */
 
 fun Workbook.saveAt(path: String) {
-  FileOutputStream(path).let {
-    write(it)
-    it.close()
+  FileOutputStream(path).run {
+    write(this)
+    close()
   }
 }
 
 fun Sheet.rowAppend(rowNum: Int, value: String?) {
-  val row: Row? = this.getRow(rowNum)
-  value?.let { row?.createCell(row.lastCellNum + 1)?.setCellValue(it) }
+  getRow(rowNum)?.run {
+    value?.let { createCell(lastCellNum + 1)?.setCellValue(value) }
+  }
 }

@@ -17,7 +17,7 @@ import org.jetbrains.annotations.NotNull;
  */
 public class MoneyDAO {
 
-  public static Workbook readMoneyWorkbook(@NotNull String moneyPath) {
+  public static Workbook readWorkbook(@NotNull String moneyPath) {
     try {
       if (moneyPath.endsWith(".xlsx")) {
         return new XSSFWorkbook(new FileInputStream(moneyPath));

@@ -15,10 +15,10 @@ import java.util.function.Consumer
  * @CreateTime 2022年02月26日 14:19:00
  */
 class RelationListener constructor(
-    var consumer: Consumer<List<PersonRelationPair>>,
+    private val consumer: Consumer<List<PersonRelationPair>>,
 ) : ReadListener<PersonRelationPair> {
 
-  var memoryDataList: MutableList<PersonRelationPair> = mutableListOf()
+  private val memoryDataList: MutableList<PersonRelationPair> = mutableListOf()
 
   override fun invoke(pair: PersonRelationPair?, context: AnalysisContext?) {
     Log.get().info("解析到一条数据 {}", JSONUtil.toJsonStr(pair))

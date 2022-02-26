@@ -11,7 +11,7 @@ import org.apache.poi.ss.usermodel.Workbook;
  */
 public interface MoneyService {
 
-  Workbook getMoneyWorkbook();
+  Workbook getWorkbook();
 
   void save();
 }

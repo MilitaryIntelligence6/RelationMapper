@@ -15,7 +15,7 @@ import java.io.FileInputStream
 object MoneyDAO {
 
   @JvmStatic
-  fun readMoneyWorkbook(moneyPath: String): Workbook =
+  fun readWorkbook(moneyPath: String): Workbook =
       when {
         moneyPath.endsWith(".xlsx") -> {
           XSSFWorkbook(FileInputStream(moneyPath))

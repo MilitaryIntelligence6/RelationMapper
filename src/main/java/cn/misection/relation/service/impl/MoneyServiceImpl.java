@@ -1,7 +1,6 @@
 package cn.misection.relation.service.impl;
 
 import org.apache.poi.ss.usermodel.Workbook;
-import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
 import cn.misection.relation.dao.MoneyDAO;
 import cn.misection.relation.service.MoneyService;
@@ -20,7 +19,7 @@ public class MoneyServiceImpl implements MoneyService {
 
   private final String outPath;
 
-  private Workbook moneyWorkbook;
+  private Workbook workbook;
 
   public MoneyServiceImpl(String moneyPath, String outPath) {
     this.moneyPath = moneyPath;
@@ -29,16 +28,16 @@ public class MoneyServiceImpl implements MoneyService {
   }
 
   private void init() {
-    moneyWorkbook = MoneyDAO.readMoneyWorkbook(moneyPath);
+    workbook = MoneyDAO.readWorkbook(moneyPath);
   }
 
   @Override
   public void save() {
-    PoiUtil.saveWorkBook(moneyWorkbook, outPath);
+    PoiUtil.saveWorkBook(workbook, outPath);
   }
 
   @Override
-  public Workbook getMoneyWorkbook() {
-    return moneyWorkbook;
+  public Workbook getWorkbook() {
+    return workbook;
   }
 }

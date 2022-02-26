@@ -52,7 +52,7 @@ public class MapperTask implements Runnable {
   @Override
   public void run() {
     Map<String, String> relationMap = relationService.getRelationMap();
-    Workbook workbook = moneyService.getMoneyWorkbook();
+    Workbook workbook = moneyService.getWorkbook();
     for (Sheet sheet : workbook) {
       for (int i = START_ROW; i < sheet.getLastRowNum(); i++) {
         Row row = sheet.getRow(i);
