@@ -1,7 +1,5 @@
 package cn.misection.relation.entity
 
-import com.alibaba.excel.annotation.ExcelProperty
-
 /**
  * @ClassName PersonRelationPair
  * @author Military Intelligence 6 root
