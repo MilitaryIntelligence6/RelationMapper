@@ -15,6 +15,10 @@ object Calcer {
 
   private const val STEP: Int = INTERVAL / (GROUP_COUNT / INTERVAL)
 
+  /**
+   * ### TODO
+   * * 做缓存, 避免重复计算
+   */
   @JvmStatic
   fun shouldRetain(index: Int): Boolean {
 //    val groupIndex: Int = index % GROUP_COUNT
